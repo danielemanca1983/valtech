@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+main:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+main article {
+  height: 400px;
+  width: 70%;
+  float: left;
+  background: #ccc;
+}
+
+main aside {
+  height: 400px;
+  width: 30%;
+  float: right;
+  background: #bbb;
+}
