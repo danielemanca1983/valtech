@@ -84,12 +84,17 @@ main article {
   float: left;
   display: flex;
   flex-wrap: wrap;
+  transition: 300ms width ease;
+}
+
+.sidebar-closed {
+  height: 0;
 }
 
 main article .grid-block {
   margin-bottom: 20px;
   margin-right: 20px;
-  width: calc(33% - 20px);
+  width: calc(33.333333333333336% - 20px);
 }
 
 main article .grid-block:nth-child(3n+0) {
@@ -104,8 +109,11 @@ main aside {
   width: 30%;
   float: right;
   padding: 0 20px;
-  transition: width .5s;
+
   transform: translate3d(0,0,0);
+  transition: 300ms height ease;
+  height: calc(100% - 100px);
+  overflow: auto;
 }
 
 main aside p {
@@ -114,4 +122,14 @@ main aside p {
 
 footer {
   text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  nav ul li a#sidebar, main aside {
+    display: none;
+  }
+
+  main article {
+    width: 100%;
+  }
 }
